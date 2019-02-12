@@ -1,4 +1,4 @@
-package com.wisrc.basic;
+package com.wisrc;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
