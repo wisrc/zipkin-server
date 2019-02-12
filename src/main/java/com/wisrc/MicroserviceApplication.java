@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import zipkin2.server.internal.EnableZipkinServer;
 
 @SpringBootApplication()
 @EnableDiscoveryClient
@@ -14,6 +15,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EnableFeignClients(
         basePackages = {"com.wisrc.microservice.feign"}
 )
+@EnableZipkinServer
 public class MicroserviceApplication {
 
     public static void main(String[] args) {

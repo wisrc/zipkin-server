@@ -21,21 +21,19 @@ import org.springframework.data.cassandra.repository.config.EnableCassandraRepos
 public class CassandraConfigurer {
 
     @Value("${cassandra.host}")
-    private String host = "118.31.46.174";
+    private String host;
 
     @Value("${cassandra.keyspace}")
-    private String keyspace = "gateway";
+    private String keyspace;
 
     @Value("${cassandra.port}")
-    private Integer port = 9042;
+    private Integer port;
 
     @Bean
     public CassandraClusterFactoryBean cluster() {
-
         CassandraClusterFactoryBean cluster = new CassandraClusterFactoryBean();
         cluster.setContactPoints(host);
         cluster.setPort(port);
-
         return cluster;
     }
 
